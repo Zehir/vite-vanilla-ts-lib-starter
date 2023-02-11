@@ -11,7 +11,6 @@ The starter is built on top of Vite 4.x and prepared for writing libraries in Ty
 - Stylelint - styles linter
 - Prettier - formatter
 - Jest - test framework
-- Husky + lint-staged - pre-commit git hook set up for formatting
 
 ## GitHub Template
 
@@ -51,8 +50,6 @@ The starter contains the following scripts:
 - `format:scripts` - format `.ts`, `.html` and `.json` files with prettier
 - `format:styles` - format `.cs` and `.scss` files with stylelint
 - `format` - format all with prettier and stylelint
-- `prepare` - script for setting up husky pre-commit hook
-- `uninstall-husky` - script for removing husky from repository
 
 ## Acknowledgment
 
