@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": "./src",
+        "module": "ESNext",
+        "target": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "strict": true,
+        "esModuleInterop": true,
+        "jsx": "preserve",
+        "skipLibCheck": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true,
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "types": [],
+        "paths": {
+            "~/*": [
+                "src/*"
+            ]
+        }
+    },
+    "vueCompilerOptions": {
+        "plugins": [
+            "@vue-macros/volar/define-model",
+            "@vue-macros/volar/define-props",
+            "@vue-macros/volar/define-props-refs",
+            "@vue-macros/volar/short-vmodel",
+            "@vue-macros/volar/define-slots",
+            "@vue-macros/volar/export-props"
+        ]
+    },
+    "include": [
+        "src/index.ts"
+    ],
+    "exclude": [
+        "**/*.test.ts",
+        "node_modules",
+        "test/**",
+        ".history/**",
+        "playground"
+    ]
+}

@@ -1,6 +1,11 @@
 import path from "path";
 import { defineConfig } from "vite";
 import packageJson from "./package.json";
+import Vue from '@vitejs/plugin-vue';
+import Pages from 'vite-plugin-pages';
+import Layouts from 'vite-plugin-vue-layouts';
+import VueMacros from 'unplugin-vue-macros/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 const getPackageName = () => {
   return packageJson.name;
@@ -22,7 +27,50 @@ const fileName = {
 
 const formats = Object.keys(fileName) as Array<keyof typeof fileName>;
 
+console.log(path.resolve(__dirname, 'playground'))
 module.exports = defineConfig({
+  resolve: {
+    alias: {
+      '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  plugins: [
+    VueMacros({
+      plugins: {
+        vue: Vue({
+          reactivityTransform: false,
+        }),
+      },
+    }),
+
+    Pages({
+      dirs: 'playground/pages',
+      extensions: ['vue'],
+    }),
+
+    Layouts({
+      layoutsDirs: 'playground/layouts'
+    }),
+    
+    AutoImport({
+      // targets to transform
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/, /\.vue\?vue/, // .vue
+      ],
+    
+      // global imports to register
+      imports: [
+        // presets
+        'vue',
+        'vue-router',
+      ],
+      // Auto import for module exports under directories
+      dirs: [
+        './src/**',
+      ],
+    }),
+  ],
   base: "./",
   build: {
     lib: {
