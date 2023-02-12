@@ -1,4 +1,8 @@
 <template>
-  <h1>Layout</h1>
-  <router-view />
+  <v-layout>
+    <v-app-bar title="Application bar" />
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-layout>
 </template>

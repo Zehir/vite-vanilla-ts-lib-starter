@@ -5,6 +5,8 @@ import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Vuetify from 'vite-plugin-vuetify'
+
 
 module.exports = defineConfig({
   resolve: {
@@ -22,6 +24,8 @@ module.exports = defineConfig({
       },
     }),
 
+    Vuetify({}),
+
     Pages({
       extensions: ['vue'],
     }),
@@ -35,10 +39,6 @@ module.exports = defineConfig({
         'vue/macros',
       ],
       dts: 'src/auto-imports.d.ts',
-      dirs: [
-        'src/composables',
-        'src/stores',
-      ],
       vueTemplate: true,
     }),
   ],
