@@ -3,17 +3,6 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
-    "dev": "vite --host --port 4000",
-    "build": "vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "build:vite": "vite build",
-    "build:dts": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "test": "vitest",
-    "lint:scripts": "eslint . --ext .ts",
-    "lint:styles": "stylelint ./**/*.{css,scss}",
-    "format:scripts": "prettier . --write",
-    "format:styles": "stylelint ./**/*.{css,scss} --fix",
-    "format": "npm run format:scripts && npm run format:styles",
-    "up": "taze major -I"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",

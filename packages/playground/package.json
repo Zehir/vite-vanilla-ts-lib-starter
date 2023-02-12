@@ -4,15 +4,7 @@
   "version": "0.0.2",
   "scripts": {
     "dev": "vite --host --port 4000",
-    "build": "vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "build:vite": "vite build",
-    "build:dts": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "test": "vitest",
-    "lint:scripts": "eslint . --ext .ts",
-    "lint:styles": "stylelint ./**/*.{css,scss}",
-    "format:scripts": "prettier . --write",
-    "format:styles": "stylelint ./**/*.{css,scss} --fix",
-    "format": "npm run format:scripts && npm run format:styles",
+    "build": "vite build",
     "up": "taze major -I"
   },
   "dependencies": {
@@ -27,7 +19,6 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@volar-plugins/prettier": "^1.1.6",
     "@volar-plugins/prettyhtml": "^1.0.3",
-    "dts-bundle-generator": "^7.2.0",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",

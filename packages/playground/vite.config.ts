@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 module.exports = defineConfig({
   resolve: {
     alias: {
+      'vite-vanilla-ts-lib-starter-core': path.resolve(__dirname, '../core/index.ts'),
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
