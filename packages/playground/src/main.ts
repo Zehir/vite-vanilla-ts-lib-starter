@@ -2,7 +2,7 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
 import { createApp } from 'vue'
 // import { createWebHashHistory } from 'vue-router'
-import App from './App.vue'
+import App from '../App.vue'
 
 import generatedRoutes from '~pages'
 

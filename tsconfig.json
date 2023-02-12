@@ -1,60 +1,35 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "./src",
     "module": "ESNext",
     "target": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["DOM", "ESNext"],
     "strict": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "moduleResolution": "node",
-    "sourceMap": true,
     "resolveJsonModule": true,
-    "noEmit": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "node",
       "vitest",
-      "vite/client",
-      "vue/ref-macros",
-      "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client",
-      "unplugin-vue-macros/macros-global"
+      "vitest/globals"
     ],
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"],
     }
   },
-  "vueCompilerOptions": {
-    "plugins": [
-      "@vue-macros/volar/define-model",
-      "@vue-macros/volar/define-props",
-      "@vue-macros/volar/define-props-refs",
-      "@vue-macros/volar/short-vmodel",
-      "@vue-macros/volar/define-slots",
-      "@vue-macros/volar/export-props"
-    ]
-  },
   "include": [
-    "src/index.ts"
+    "packages",
+    "vitest.config.ts"
   ],
   "exclude": [
+    "**/dist",
     "**/*.test.ts",
+    "**/test",
     "node_modules",
-    "test/**",
-    ".history/**",
-    "playground"
   ]
 }
